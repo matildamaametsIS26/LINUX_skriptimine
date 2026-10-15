@@ -13,3 +13,10 @@ mkdir skriptimine
 
 c) sisene antud kausta
 cd skriptimine
+
+remote seadistamine:
+e) git remote add nimi github:aadress
+git remote add skriptimine git@github.com:kasutajanimi/reponimi.git
+
+f)git remote kontroll
+git remote -v
