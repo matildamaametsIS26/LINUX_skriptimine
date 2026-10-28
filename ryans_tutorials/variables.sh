@@ -1,9 +1,13 @@
 #!/bin/bash
-# A simple copy script
+# A simple variable example
 
-cp $1 $2
+var1=Hello
 
-# Verification for if the copy worked
+var2=Fred
 
-echo Details for $2
-ls -lh $2
+echo $var1 $var2
+echo
+
+sampledir=/etc
+
+ls $sampledir
