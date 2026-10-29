@@ -4,7 +4,7 @@
 
 read -p 'Reisijate arv: ' reisijatearv
 read -p 'Bussi istekohtade arv: ' bussikohad
-echo $reisijatearv $bussikohad
+#echo $reisijatearv $bussikohad
 ##if [ $reisijatearv -ne $bussikopad ]
 ##then
 ##	echo "Ühest bussit piisab"
@@ -14,6 +14,6 @@ then
     echo "Ühest bussist piisab"
 else
 taisbussid=$( expr $reisijatearv % $bussikohad )
-
-	echo $taisbussid
+ekstrabuss=$( expr $reisijatearv / $bussikohad + 1 )
+echo $taisbussid "reisijat jääb maha, sul on vaja kokku " $ekstrabuss " bussi"
 fi
