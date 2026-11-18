@@ -6,11 +6,13 @@ for (( i=o; i<=1; i++ ))
 do
 	for (( j=0; j<=1; j++ ))
 	do
-		if (( ${arr[$i,$j]} % 2 == 0 ))
-		then
-			echo "even number at pos [$i,$j]: ${arr[$i,$j]}"
-		else
-			echo "odd number at pos  [$i,$j]: ${arr[$i,$j]}"
-		fi
+		IFS=',' read -ra words <<< "${arr[$i,$j]}"
+        	for word in "${words[@]}"
+        	do
+            		if [[ $word == *p* ]]
+            		then
+                		echo "Match found at position [$i,$j]: $word"
+            		fi
+        	done
 	done
 done
