@@ -1,7 +1,6 @@
 #!/bin/bash
 # arvutab 10 esimese paarisarvude summa
 
-read -p "sisesta arv kust alustada: " arv
 summa=0
 for (( arv=1; arv<11; arv++ )); do
 	jaak=$(($arv % 2))
@@ -9,4 +8,4 @@ for (( arv=1; arv<11; arv++ )); do
 		summa=$(($summa + $arv))
 	fi
 done
-echo "Summa on: $summa"
+echo "vahemikus 1-10 (kaasaarvatud) paarisarvude summa on: $summa"
